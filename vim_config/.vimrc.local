@@ -1,0 +1,30 @@
+"映射上下左右的光标移动
+
+"行光标移动
+nmap lh   ^
+nmap le   $
+
+"将制表符扩展为空格
+set noexpandtab
+"设置编辑时制表符占用空格数
+set tabstop=8
+set shiftwidth=8
+"让 vim 把连续数量的空格视为一个制表符
+set softtabstop=8
+
+"让配置变更立即生效
+autocmd BufWritePost $MYVIMRC source $MYVIMRC
+
+"开启实时搜索功能
+set incsearch
+
+hi comment ctermfg=5
+"智能补全
+
+"设置行号
+set number
+
+"colorscheme 颜色主题名字
+colorscheme chocolate
+let g:spf13_bundle_group = 1
+let g:pymode = 1
