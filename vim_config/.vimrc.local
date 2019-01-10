@@ -4,7 +4,10 @@
 nmap lh   ^
 nmap le   $
 
-"将制表符扩展为空格
+"设置Tagbar
+"nmap <F3> <ctrl-T>
+"nmap <F4> <ctrl-]>
+"不将制表符扩展为空格
 set noexpandtab
 "设置编辑时制表符占用空格数
 set tabstop=8
@@ -18,13 +21,35 @@ autocmd BufWritePost $MYVIMRC source $MYVIMRC
 "开启实时搜索功能
 set incsearch
 
-hi comment ctermfg=5
+"hi comment ctermfg=5
 "智能补全
 
 "设置行号
 set number
+"hi LineNr cterm=NONE ctermfg=yellow ctermbg=gray
+"hi LineNr cterm=NONE ctermbg=white
+
+"syntax enable
+"syntax on
+"term=screen
 
 "colorscheme 颜色主题名字
-colorscheme chocolate
-let g:spf13_bundle_group = 1
+colorscheme moonshine
+"colorscheme darkdot
+"colorscheme evening
+
+"height light cursor
+set cursorline
+hi CursorLine cterm=NONE ctermbg=black ctermfg=blue guibg=black guifg=gray
+set cursorcolumn
+hi Cursorcolumn cterm=NONE ctermbg=gray ctermfg=blue guibg=black guifg=gray
+
+let g:spf13_keep_trailing_whitespacebundle_group = 1
 let g:pymode = 1
+let g:spf13_leader=','
+
+"Tagbar configure
+let g:tagbar_autofocus = 1
+let g:tagbar_sort = 0
+let g:tagbar_width = 25
+let g:spf13_keep_trailing_whitespace = 1
